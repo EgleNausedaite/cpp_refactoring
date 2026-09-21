@@ -6,7 +6,6 @@ Order::Order(std::optional<std::vector<OrderItem>> items, Customer customer)
     : items_(std::move(items)), customer_(customer) {}
 
 void Order::validateItems() const {
-    // Validation
     if (!items_.has_value()) {
         throw IllegalStateException("Items cannot be null");
     }
