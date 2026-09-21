@@ -23,7 +23,6 @@ double Order::calculateSubtotal() const {
 }
 
 double Order::calculateDiscount(double subtotal) const {
-    // Discount rules
     double discount = 0.0;
     if (customer_.isLoyal()) {
         discount = subtotal * 0.10;
