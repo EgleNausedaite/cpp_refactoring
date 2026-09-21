@@ -5,8 +5,7 @@ namespace refactoring::longmethod {
 Order::Order(std::optional<std::vector<OrderItem>> items, Customer customer)
     : items_(std::move(items)), customer_(customer) {}
 
-OrderSummary Order::summarise() const {
-
+void Order::validateItems() const {
     // Validation
     if (!items_.has_value()) {
         throw IllegalStateException("Items cannot be null");
@@ -14,6 +13,11 @@ OrderSummary Order::summarise() const {
     if (items_->empty()) {
         throw IllegalStateException("Order must contain items");
     }
+}
+
+OrderSummary Order::summarise() const {
+
+    validateItems();
 
     // Subtotal calculation
     double subtotal = 0.0;
