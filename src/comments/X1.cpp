@@ -15,7 +15,6 @@ int X1::m(int lowerBound, int upperBound) {
 }
 
 int X1::square(int k) {
-    // Return square of input
     return k * k;
 }
 
