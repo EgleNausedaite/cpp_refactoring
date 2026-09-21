@@ -3,15 +3,15 @@
 namespace refactoring::comments {
 
 int X1::m(int lowerBound, int upperBound) {
-    int p = 0;
+    int sum = 0;
 
     for (int i = lowerBound; i <= upperBound; i++) {
         // Add square of each number in the range
-        p += square(i);
+        sum += square(i);
     }
 
     // Return accumulated sum
-    return p;
+    return sum;
 }
 
 int X1::square(int number) {
