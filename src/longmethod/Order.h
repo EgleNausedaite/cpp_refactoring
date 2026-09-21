@@ -27,6 +27,7 @@ private:
     double calculateSubtotal() const;
     double calculateDiscount(double subtotal) const;
     double calculateTax(double subtotal, double discount) const;
+    double calculateTotal(double subtotal, double discount, double tax) const;
 
     std::optional<std::vector<OrderItem>> items_;
     Customer customer_;
