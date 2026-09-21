@@ -25,6 +25,7 @@ public:
 private:
     void validateItems() const;
     double calculateSubtotal() const;
+    double calculateDiscount(double subtotal) const;
 
     std::optional<std::vector<OrderItem>> items_;
     Customer customer_;
