@@ -33,9 +33,7 @@ double Order::calculateDiscount(double subtotal) const {
 }
 
 double Order::calculateTax(double subtotal, double discount) const {
-    // Tax calculation
-    double tax = (subtotal - discount) * 0.20;
-    return tax;
+    return (subtotal - discount) * 0.20;
 }
 
 OrderSummary Order::summarise() const {
