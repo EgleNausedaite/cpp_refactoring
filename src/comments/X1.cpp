@@ -6,11 +6,9 @@ int X1::m(int lowerBound, int upperBound) {
     int sum = 0;
 
     for (int i = lowerBound; i <= upperBound; i++) {
-        // Add square of each number in the range
         sum += square(i);
     }
 
-    // Return accumulated sum
     return sum;
 }
 
