@@ -1,19 +1,16 @@
 #include "divergentchange/CustomerService.h"
 #include "EmailValidator.h"
+#include "LoyaltyPoints.h"
 
 #include <algorithm>
 #include <cctype>
+
 
 namespace refactoring::divergentchange {
 
 namespace {
 
-class LoyaltyPoints {
-public:
-    int calculate(int numberOfPurchases) const {
-        return numberOfPurchases * 10;
-    } 
-};
+
 
 std::string trim(const std::string& s) {
     auto start = s.find_first_not_of(" \t\n\r\f\v");
