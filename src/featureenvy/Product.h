@@ -9,15 +9,7 @@ public:
     double getPrice() const;
     bool isOnSale() const;
 
-    double calculateProductFinalPrice(const Product &product) const {
-        double price = product.getPrice();
-
-        if (product.isOnSale()) {
-            price = price * 0.8;
-        }
-
-        return price;
-    }
+    double calculateProductFinalPrice(const Product &product) const;
 
 private:
     double price_;
