@@ -29,16 +29,20 @@ std::string toUpper(const std::string& s) {
 
 class EmailValidator
 {
-
-
+public:
+    bool isValidEmail(const char* email) const
+    {
+        if (email == nullptr) {
+            return false;
+        }
+        static const std::regex pattern("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+        return std::regex_match(email, pattern);
+    }
 };
 
 bool CustomerService::isValidEmail(const char* email) const {
-    if (email == nullptr) {
-        return false;
-    }
-    static const std::regex pattern("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
-    return std::regex_match(email, pattern);
+    EmailValidator emailValidator;
+    return emailValidator.isValidEmail(email);
 }
 
 std::string CustomerService::formatDisplayName(const std::string& firstName, const std::string& lastName) const {
