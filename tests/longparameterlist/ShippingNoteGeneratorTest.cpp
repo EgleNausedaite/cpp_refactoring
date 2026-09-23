@@ -15,8 +15,6 @@ TEST_F(ShippingNoteGeneratorTest, shouldGenerateShippingNoteWithAllInputFields) 
 
     std::string result = shippingNoteGenerator.generateShippingNote(
             Customer("Jane", "Doe"),
-            "Jane",
-            "Doe",
 
             "12 Baker Street",
             "Flat 4B",
@@ -45,8 +43,6 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeCustomerFullName) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
             Customer("John", "Smith"),
-            "John",
-            "Smith",
 
             "1 High Street",
             "Apt 2",
@@ -66,8 +62,6 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeOrderIdAndItemDetails) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
             Customer("Alice", "Brown"),
-            "Alice",
-            "Brown",
 
             "50 King Street",
             "Unit 3",
@@ -89,8 +83,6 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeFullAddressAcrossAllFields) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
             Customer("Emma", "Jones"),
-            "Emma",
-            "Jones",
 
             "99 High Road",
             "Floor 2",
@@ -114,8 +106,6 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeQuantityCorrectly) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
             Customer("Tom", "White"),
-            "Tom",
-            "White",
 
             "10 Market Street",
             "",
