@@ -41,8 +41,7 @@ public:
 };
 
 bool CustomerService::isValidEmail(const char* email) const {
-    EmailValidator emailValidator;
-    return emailValidator.isValidEmail(email);
+    return EmailValidator().isValidEmail(email);
 }
 
 std::string CustomerService::formatDisplayName(const std::string& firstName, const std::string& lastName) const {
