@@ -1,8 +1,8 @@
 #include "divergentchange/CustomerService.h"
+#include "EmailValidator.h"
 
 #include <algorithm>
 #include <cctype>
-#include <regex>
 
 namespace refactoring::divergentchange {
 
@@ -27,20 +27,7 @@ std::string toUpper(const std::string& s) {
 } // namespace
 
 
-class EmailValidator
-{
-public:
-    bool isValidEmail(const char* email) const
-    {
-        if (email == nullptr) {
-            return false;
-        }
-        static const std::regex pattern("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
-        return std::regex_match(email, pattern);
-    }
-};
-
-bool CustomerService::isValidEmail(const char* email) const {
+    bool CustomerService::isValidEmail(const char* email) const {
     return EmailValidator().isValidEmail(email);
 }
 
