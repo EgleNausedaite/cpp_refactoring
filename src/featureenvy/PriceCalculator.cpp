@@ -3,7 +3,7 @@
 namespace refactoring::featureenvy {
 
 double PriceCalculator::calculateFinalPrice(const Product& product) const {
-    return product.calculateProductFinalPrice(product);
+    return product.calculateProductFinalPrice();
 }
 
 

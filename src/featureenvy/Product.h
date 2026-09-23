@@ -9,7 +9,7 @@ public:
     double getPrice() const;
     bool isOnSale() const;
 
-    double calculateProductFinalPrice(const Product &product) const;
+    double calculateProductFinalPrice() const;
 
 private:
     double price_;
