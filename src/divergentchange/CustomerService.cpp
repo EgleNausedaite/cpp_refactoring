@@ -26,6 +26,13 @@ std::string toUpper(const std::string& s) {
 
 } // namespace
 
+
+class EmailValidator
+{
+
+
+};
+
 bool CustomerService::isValidEmail(const char* email) const {
     if (email == nullptr) {
         return false;
