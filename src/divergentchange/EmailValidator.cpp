@@ -3,7 +3,12 @@
 //
 
 #include <regex>
-#include <cctype>
-#include <algorithm>
-#include "divergentchange/CustomerService.h"
 #include "EmailValidator.h"
+
+bool EmailValidator::isValidEmail(const char *email) const {
+    if (email == nullptr) {
+        return false;
+    }
+    static const std::basic_regex<char> pattern("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+    return std::regex_match(email, pattern);
+}
