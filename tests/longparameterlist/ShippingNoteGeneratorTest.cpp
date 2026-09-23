@@ -14,6 +14,7 @@ protected:
 TEST_F(ShippingNoteGeneratorTest, shouldGenerateShippingNoteWithAllInputFields) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
+            Customer("Jane", "Doe"),
             "Jane",
             "Doe",
 
@@ -43,6 +44,7 @@ TEST_F(ShippingNoteGeneratorTest, shouldGenerateShippingNoteWithAllInputFields) 
 TEST_F(ShippingNoteGeneratorTest, shouldIncludeCustomerFullName) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
+            Customer("John", "Smith"),
             "John",
             "Smith",
 
@@ -63,6 +65,7 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeCustomerFullName) {
 TEST_F(ShippingNoteGeneratorTest, shouldIncludeOrderIdAndItemDetails) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
+            Customer("Alice", "Brown"),
             "Alice",
             "Brown",
 
@@ -85,6 +88,7 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeOrderIdAndItemDetails) {
 TEST_F(ShippingNoteGeneratorTest, shouldIncludeFullAddressAcrossAllFields) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
+            Customer("Emma", "Jones"),
             "Emma",
             "Jones",
 
@@ -109,6 +113,7 @@ TEST_F(ShippingNoteGeneratorTest, shouldIncludeFullAddressAcrossAllFields) {
 TEST_F(ShippingNoteGeneratorTest, shouldIncludeQuantityCorrectly) {
 
     std::string result = shippingNoteGenerator.generateShippingNote(
+            Customer("Tom", "White"),
             "Tom",
             "White",
 

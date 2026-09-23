@@ -28,6 +28,7 @@ add_library(refactoring_core
         src/longmethod/Order.cpp
         src/longmethod/OrderItem.cpp
         src/longmethod/OrderSummary.cpp
+        src/longparameterlist/Customer.h
         src/longparameterlist/ShippingNoteGenerator.cpp
 )
 target_include_directories(refactoring_core PUBLIC src)

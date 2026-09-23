@@ -2,16 +2,8 @@
 
 namespace refactoring::longparameterlist {
 
-class Customer {
-public:
-        Customer(const std::string& firstName, const std::string& lastName) :
-        m_firstName(firstName), m_lastName(lastName) {
-        }
-        std::string m_firstName;
-        std::string m_lastName;
-};
-
 std::string ShippingNoteGenerator::generateShippingNote(
+        const Customer& customer,
         const std::string& customerFirstName,
         const std::string& customerLastName,
 
@@ -24,6 +16,8 @@ std::string ShippingNoteGenerator::generateShippingNote(
         const std::string& orderId,
         const std::string& itemDescription,
         int quantity) const {
+
+        (void) customer;
 
     std::string fullName = customerFirstName + " " + customerLastName;
 
