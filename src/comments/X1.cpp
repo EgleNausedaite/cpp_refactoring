@@ -5,8 +5,8 @@ namespace refactoring::comments {
 int Maths::sumSquaresOverRange(int lowerBound, int upperBound) {
     int sum = 0;
 
-    for (int i = lowerBound; i <= upperBound; i++) {
-        sum += square(i);
+    for (int number = lowerBound; number <= upperBound; number++) {
+        sum += square(number);
     }
 
     return sum;
