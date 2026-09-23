@@ -17,6 +17,7 @@ add_library(refactoring_core
         src/comments/X1.cpp
         src/divergentchange/AccountStatus.cpp
         src/divergentchange/CustomerService.cpp
+        src/divergentchange/DisplayName.cpp
         src/divergentchange/EmailValidator.cpp
         src/divergentchange/LoyaltyPoints.cpp
         src/duplication/Forecast.cpp
