@@ -7,6 +7,10 @@ public:
         
     }
 
+    std::string getFullName() const {
+        return m_firstName + " " + m_lastName;
+    }
+
     std::string m_firstName;
     std::string m_lastName;
 };
