@@ -8,6 +8,13 @@ namespace refactoring::divergentchange {
 
 namespace {
 
+class LoyaltyPoints {
+public:
+    int calculate(int numberOfPurchases) const {
+        return numberOfPurchases * 10;
+    } 
+};
+
 std::string trim(const std::string& s) {
     auto start = s.find_first_not_of(" \t\n\r\f\v");
     if (start == std::string::npos) {
@@ -36,7 +43,7 @@ std::string CustomerService::formatDisplayName(const std::string& firstName, con
 }
 
 int CustomerService::calculateLoyaltyPoints(int numberOfPurchases) const {
-    return numberOfPurchases * 10;
+    return LoyaltyPoints().calculate(numberOfPurchases);
 }
 
 std::string CustomerService::determineAccountStatus(int daysSinceLastLogin) const {
